@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+      //dinamik dizi oluşturmak, pointer aritmetiği ile doldurmak ve salmak
+
+	int *dizi; // pointer oluşur
+	dizi = new int[5]; // 5 elemanlı tamsayı tipindeki dizi için heapten alan tahsis edilir
+	dizi[1]=8; // dizilere has bir özellik * kullanmadan değer atanabilir
+	cout<< dizi[1]<<endl; // test yazdırması
+	*(dizi+1) = 6; // pointer aritmetiğinde pointerın işaret ettiği yeri 1 arrtır ve içine bu değeri ata
+	dizi++; // pointer aritmetiği yardımıyla işaret edilen yer kaydırılır
+	*(dizi+1)=5; //aynı işlem tekrar yapılır
+	cout<< dizi[0]<< dizi[1]<< dizi[2]<< dizi[3]<<dizi[4]<< endl; // dizi yazdırılır
+
+	delete [] dizi; // tahsis edilen alan serbest bırakılır.
+
+	return 0;
+}
