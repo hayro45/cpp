@@ -2,13 +2,18 @@
 using namespace std;
 
 int main() {
-//pointer nedir ?
+		//pointer nedir ?
 	int x = 5; // x değişkeni oluştur ve 5 değeri ata
 	int *xptr; // xptr göstergesi(pointeri) oluştur
 	xptr = &x; // xptr x in adresini göstersin
 	cout << "x="<< x << " xptr= "<< *xptr << endl; // göstergeyi consola yaz
 	*xptr = 6; // xptrnin gösterdiği hedefin içeriğine ulaşır ve 6 atar
 	cout << "x="<< x << " xptr= "<< *xptr << endl; // göstergeyi consola yaz
-  
+
+		//dinamik bellekten tam sayı kadar yer ayırmak
+	int *ptr;
+	ptr = new int;
+	*ptr = 5;
+
   return 0;
 }
